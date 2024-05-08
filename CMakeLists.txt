@@ -23,3 +23,5 @@ idf_component_register(
     INCLUDE_DIRS "src"
     PRIV_REQUIRES ${OTA_PRIV_REQUIRES}
 )
+
+target_compile_options(${COMPONENT_LIB} INTERFACE $<$<COMPILE_LANGUAGE:CXX>:-Wno-volatile>)
